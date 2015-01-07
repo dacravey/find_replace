@@ -20,5 +20,11 @@ describe('string#find_and_replace') do
      expect("Hello, world. How are you world?".find_and_replace("world", "universe")).to(eq("Hello, universe. How are you universe?"))
    end
 
+  # so that we can be case insensitive
+  it("returns an updated string with the matching words replaced, where entered word has different case than is in phrase") do
+    expect("Hello, WORld. How are you world?".find_and_replace("world", "universe")).to(eq("Hello, universe. How are you universe?"))
+  end
+
+
 
 end
