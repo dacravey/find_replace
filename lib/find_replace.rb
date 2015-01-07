@@ -5,10 +5,10 @@ class String
 
     words = original_string.split()
     words.each() do |word|
-      if word == string_to_find #exact match
+      if word.downcase() == string_to_find.downcase() #exact match
         result_array.push(replacement)
-      elsif word.include?(string_to_find) #partial match
-          sub = word.gsub(string_to_find, replacement)
+      elsif word.downcase().include?(string_to_find.downcase()) #partial match
+          sub = word.downcase().gsub(string_to_find.downcase(), replacement)
           result_array.push(sub)
       else #if word is not found
         result_array.push(word)
