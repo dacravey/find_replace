@@ -15,10 +15,10 @@ describe('string#find_and_replace') do
     expect("Hello world How are you world".find_and_replace("world", "universe")).to(eq("Hello universe How are you universe"))
   end
 
-#  # punctuation means partial match check necessary
-#  it("returns an updated string with the matching words replaced, where string includes punctuation") do
-#    expect("Hello, world. How are you world?".find_and_replace("world", "universe")).to(eq("Hello, universe. How are you universe?"))
-#  end
+   # punctuation means partial match check necessary
+   it("returns an updated string with the matching words replaced, where string includes punctuation") do
+     expect("Hello, world. How are you world?".find_and_replace("world", "universe")).to(eq("Hello, universe. How are you universe?"))
+   end
 
 
 end
